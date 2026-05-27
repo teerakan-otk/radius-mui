@@ -14,12 +14,14 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import {
-  Database,
+  Box,
+  Code2,
   GalleryVerticalEnd,
-  Globe,
+  Gift,
   LayoutDashboard,
-  LogOut,
   Settings,
+  Tag,
+  Ticket,
   User,
 } from "lucide-react";
 import { NavMain } from "./nav-main";
@@ -33,14 +35,24 @@ const data = {
       icon: LayoutDashboard,
     },
     {
-      label: "Frontend",
-      url: "/frontend",
-      icon: Globe,
+      label: "User Management",
+      url: "/user-management",
+      icon: User,
     },
     {
-      label: "Backend",
-      url: "/backend",
-      icon: Database,
+      label: "Coupon",
+      url: "/coupon",
+      icon: Ticket,
+    },
+    {
+      label: "Packages",
+      url: "/packages",
+      icon: Tag,
+    },
+    {
+      label: "NAS Devices",
+      url: "/nas-devices",
+      icon: Box,
     },
   ],
   navUser: [
