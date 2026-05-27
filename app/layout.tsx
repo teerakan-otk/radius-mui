@@ -11,10 +11,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Admin Dashboard",
-    template: "%s | Admin Dashboard",
+    default: "Radius MUI",
+    template: "%s | Radius MUI",
   },
-  description: "Admin Dashboard",
+  description: "Radius MUI",
 };
 
 export default function RootLayout({

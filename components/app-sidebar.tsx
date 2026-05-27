@@ -94,7 +94,7 @@ export function AppSidebar() {
                 <GalleryVerticalEnd className="size-4" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
-                <span className="font-medium">Admin Dashboard</span>
+                <span className="font-medium">Radius MUI</span>
               </div>
             </SidebarMenuButton>
           </SidebarMenuItem>
