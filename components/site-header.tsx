@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react"; // นำเข้า React เพื่อใช้ Fragment แบบมี key
 import { usePathname } from "next/navigation";
 
 import { Separator } from "@/components/ui/separator";
@@ -28,21 +29,22 @@ export function SiteHeader() {
       : ["Dashboard"];
 
   return (
-    <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+    <header className="sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b z-30 px-4 bg-background">
       <SidebarTrigger className="-ml-1" />
 
       <Separator orientation="vertical" className="mr-2 my-5" />
 
       <Breadcrumb>
-        <BreadcrumbList>
+        <BreadcrumbList className="flex items-center gap-2">
           {breadcrumbs.map((crumb, index) => (
-            <div key={crumb} className="flex items-center">
+            <React.Fragment key={crumb}>
+              {/* ย้าย Separator มาไว้นอก BreadcrumbItem */}
               {index > 0 && <BreadcrumbSeparator />}
 
-              <BreadcrumbItem>
+              <BreadcrumbItem className="flex items-center gap-2">
                 <BreadcrumbPage>{crumb}</BreadcrumbPage>
               </BreadcrumbItem>
-            </div>
+            </React.Fragment>
           ))}
         </BreadcrumbList>
       </Breadcrumb>

@@ -14,6 +14,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import {
+  Activity,
   Box,
   Code2,
   GalleryVerticalEnd,
@@ -53,6 +54,15 @@ const data = {
       label: "NAS Devices",
       url: "/nas-devices",
       icon: Box,
+    },
+    {
+      label: "Logs",
+      url: "/logs",
+      icon: Activity,
+      items: [
+        { label: "Authentication", url: "/logs/authentication" },
+        { label: "Accounting", url: "/logs/accounting" },
+      ],
     },
   ],
   navUser: [
